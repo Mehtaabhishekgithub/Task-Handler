@@ -1,41 +1,18 @@
+import { Routes, Route, Navigate } from "react-router-dom";
 import { TaskProvider } from "./context/TaskContext";
-import TaskInput from "./components/TaskInput";
-import TaskList from "./components/TaskList";
-import FilterBar from "./components/FilterBar";
-import ThemeToggle from "./components/ThemeToggle";
-import { useTasks } from "./context/TaskContext";
+import LandingPage from "./pages/LandingPage";
+import TaskApp from "./components/TaskApp";
 import "./styles/globals.css";
-
-function AppContent() {
-  const { counts } = useTasks();
-
-  return (
-    <div className="app-wrapper">
-      <div className="app-container">
-        <header className="app-header">
-          <div>
-            <h1 className="app-title">
-              task<span>.</span>
-            </h1>
-            <p className="app-subtitle">
-              {counts.pending} remaining · {counts.completed} done
-            </p>
-          </div>
-          <ThemeToggle />
-        </header>
-
-        <TaskInput />
-        <FilterBar />
-        <TaskList />
-      </div>
-    </div>
-  );
-}
 
 export default function App() {
   return (
     <TaskProvider>
-      <AppContent />
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/app" element={<TaskApp />} />
+        {/* Catch-all — redirect unknown routes to landing */}
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
     </TaskProvider>
   );
 }
