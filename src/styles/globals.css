@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=DM+Mono:wght@400;500&display=swap');
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -7,27 +6,39 @@
 }
 
 :root {
-  --bg: #f0ede8;
-  --surface: #faf9f7;
-  --surface-alt: #f3f0ec;
-  --border: rgba(0,0,0,0.08);
-  --border-strong: rgba(0,0,0,0.14);
-  --text: #1a1815;
-  --text-muted: #6b6760;
-  --text-subtle: #9e9c99;
-  --accent: #d4622a;
-  --accent-light: #faf0eb;
-  --accent-dark: #a34b1f;
-  --green: #2e7d52;
-  --green-light: #eaf4ee;
-  --radius: 14px;
-  --radius-sm: 8px;
-  --shadow: 0 2px 12px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.08);
-  --shadow-lg: 0 8px 32px rgba(0,0,0,0.10), 0 2px 8px rgba(0,0,0,0.06);
-  --font: 'DM Sans', sans-serif;
+  --bg: #fff8f0;
+  --surface: #ffffff;
+  --surface-alt: #fff0f5;
+  --border: rgba(255, 100, 150, 0.15);
+  --border-strong: rgba(255, 100, 150, 0.30);
+  --text: #2d1a2e;
+  --text-muted: #7a4f6d;
+  --text-subtle: #b388a8;
+  --accent: #ff4d8d;
+  --accent-light: #fff0f5;
+  --accent-dark: #e0006b;
+  --green: #00b894;
+  --green-light: #e0fff8;
+  --radius: 18px;
+  --radius-sm: 10px;
+  --shadow: 0 4px 16px rgba(255,77,141,0.10), 0 1px 4px rgba(0,0,0,0.06);
+  --shadow-lg: 0 8px 32px rgba(255,77,141,0.18), 0 2px 8px rgba(0,0,0,0.08);
+  --font: 'Nunito', sans-serif;
   --mono: 'DM Mono', monospace;
   --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.add-btn, .landing-nav-btn, .landing-cta {
+  border-radius: 50px;
+  font-weight: 700;
+}
+
+.filter-btn.active {
+  background: var(--accent);
+  color: white;
+  border-radius: 50px;
+}
+
 
 body.dark {
   --bg: #111110;
