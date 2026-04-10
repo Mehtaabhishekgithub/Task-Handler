@@ -1,4 +1,4 @@
-# task. ✦ Advanced Task Manager
+# task. ✦ Advanced Task Handler
 
 A clean, fast task manager built with React — featuring a landing page, React Router navigation, drag-and-drop, dark mode, smart timestamps, and local persistence.
 
@@ -50,7 +50,7 @@ A clean, fast task manager built with React — featuring a landing page, React 
 ## Project Structure
 
 ```
-task-manager/
+task-handler/
 ├── public/
 ├── src/
 │   ├── components/
